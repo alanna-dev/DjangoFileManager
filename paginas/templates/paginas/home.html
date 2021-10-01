@@ -3,15 +3,20 @@
 {% load static %}
 
 {% block content %}
-<h2>Homepage</h2>
-<p class="lead">Aplicação web desenvolvida em Django para gerenciamento de arquivos (.pdf) - CRUD simples: upload de
-    arquivos, separados por categorias; o usuário pode ainda cadastrar novas categorias, para organizar o upload de seus
-    arquivos e por fim, ele ainda pode excluí-los. ... O servidor gerencia o envio dos arquivos e salva em um banco de
-    dados (postgresql). ... Em construção...</p>
-<p>Welcome to My Site, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}!</p>
-<p>
-    <strong>Total users registered: </strong> {{ count }}
-</p>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <h1>Homepage</h1>
+            <div class="container">
+                <p class="lead">Aplicação web desenvolvida em Django para gerenciamento de arquivos (.pdf) </p>
+                <p class="lead">CRUD simples com upload de arquivos, separados por categorias; </p>
+                <p class="lead">... Em construção...</p>
+                <p>Welcome to My Site, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block rodape %}
